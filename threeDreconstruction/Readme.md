@@ -1,6 +1,8 @@
 ##### SfM 3d Reconstruction
 
-编译opencv，附加扩展模块
+依赖：
+
++ opencv，附加扩展模块
 
 gitee下载opencv 及 opencv_contribs，修改.git/config远程网址为github，运行
 
@@ -8,10 +10,14 @@ gitee下载opencv 及 opencv_contribs，修改.git/config远程网址为github�
 git pull
 cd opencv
 mkdir install
+mdir build
+cd build
 cmake -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=../install -DWITH_LIBV4L=ON -DWITH_CUDA=OFF -DWITH_TBB=ON -DWITH_OPENMP=ON -DWITH_OPENGL=ON -DOPENCV_EXTRA_MODULES_PATH=/home/wz/github/opencv_contrib/modules -DOPENCV_ENABLE_NONFREE=ON ..
 make -j16
 make install
 ```
+
++ PCL
 
 修改CMakeLists.txt opencv_dir
 
